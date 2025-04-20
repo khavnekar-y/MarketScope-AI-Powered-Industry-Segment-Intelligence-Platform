@@ -11,7 +11,7 @@ import requests
 
 # Import Config
 try:
-    from config.config import Config
+    from frontend.config import Config
 except ImportError:
     # Default config if import fails
     class Config:

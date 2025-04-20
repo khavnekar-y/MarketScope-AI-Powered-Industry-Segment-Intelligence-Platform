@@ -29,7 +29,7 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("sales_comparision_mcp_server")
 
 # Import configuration
-from config.config import Config
+from frontend.config import Config
 
 # Import Pinecone for vector search
 import pinecone

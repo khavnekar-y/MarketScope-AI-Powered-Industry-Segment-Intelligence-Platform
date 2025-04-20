@@ -15,7 +15,7 @@ from typing import Dict, Any, List
 # Add root directory to path for imports
 sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 
-from config.config import Config
+from frontend.config import Config
 from frontend.utils import sidebar
 from agents.unified_agent import unified_agent
 
@@ -111,7 +111,7 @@ async def query_marketing_knowledge(question: str, segment: str = None, top_k: i
         st.info("Retrieving relevant marketing content...")
 
         # Import required dependencies
-        from agents.custom_mcp_client import MCPClient
+        from frontend.custom_mcp_client import MCPClient
 
         # Create a direct connection to the market_analysis service
         market_analysis_client = MCPClient("market_analysis")
@@ -338,7 +338,7 @@ def show():
             # If query_result is not defined, try to fetch chunks again
             try:
                 # Create a direct connection to get the chunks
-                from agents.custom_mcp_client import MCPClient
+                from frontend.custom_mcp_client import MCPClient
                 market_analysis_client = MCPClient("market_analysis")
                 for chunk_id in chunk_ids:
                     try:

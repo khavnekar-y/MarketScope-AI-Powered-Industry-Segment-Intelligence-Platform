@@ -16,7 +16,7 @@ from frontend.utils import process_query, sidebar, create_visualization_from_mcp
 # from mcp.client import MCPClient
  
 # With:
-from agents.custom_mcp_client import MCPClient
+from frontend.custom_mcp_client import MCPClient
  
 # Create a simple MCPClient alternative that uses requests
 class SimpleMCPClient:
@@ -63,7 +63,7 @@ MCPClient = SimpleMCPClient
 # Check your get_mcp_server_url function to ensure it's looking up the right port
 def get_mcp_server_url(segment_name):
     """Get the URL for a specific segment MCP server"""
-    from config.config import Config
+    from frontend.config import Config
    
     # Default port if segment not found
     default_port = 8014
@@ -77,7 +77,7 @@ def get_mcp_server_url(segment_name):
         print(f"Available segments: {Config.SEGMENT_CONFIG.keys() if hasattr(Config, 'SEGMENT_CONFIG') else 'None'}")
    
     # Map segment names to server URLs
-    return f"http://localhost:{port}"
+    return f"http://34.172.249.210:{port}"
  
 st.set_page_config(layout="wide")
  

@@ -28,7 +28,7 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("segment_mcp_server")
 
 # Import project utilities
-from config.config import Config
+from frontend.config import Config
 
 def find_available_port(start_port=8000, max_port=9000):
     """Find an available port starting from start_port"""

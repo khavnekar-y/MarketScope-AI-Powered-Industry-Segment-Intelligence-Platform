@@ -2,6 +2,6 @@
 Config module initialization
 Exports Config class
 """
-from .config import Config
+from ..frontend.config import Config
 
 __all__ = ['Config']

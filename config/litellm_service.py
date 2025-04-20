@@ -5,7 +5,7 @@ import os
 import logging
 from typing import Any, Dict, List, Optional
 import litellm
-from config.config import Config
+from frontend.config import Config
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)

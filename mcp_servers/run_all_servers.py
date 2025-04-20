@@ -11,7 +11,7 @@ import time
 # Add the project root directory to Python path
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
  
-from config.config import Config
+from frontend.config import Config
  
 # Configure logging
 logging.basicConfig(level=logging.INFO)

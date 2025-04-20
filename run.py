@@ -25,7 +25,7 @@ if project_root not in sys.path:
 
 # Try to import Config
 try:
-    from config.config import Config
+    from frontend.config import Config
     logger.info("Successfully imported Config")
 except ImportError:
     logger.warning("Could not import Config, will use default values")

@@ -21,7 +21,7 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("sales_analytics_mcp_server")
 
 # Import configuration
-from config.config import Config
+from frontend.config import Config
 
 # Create FastAPI app
 app = FastAPI(title="Sales Analytics MCP Server")

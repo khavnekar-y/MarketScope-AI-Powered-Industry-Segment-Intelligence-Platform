@@ -27,8 +27,7 @@ warnings.filterwarnings('ignore')
 
 # Import the unified agent and sidebar function
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
-from agents.unified_agent import unified_agent
-from agents.custom_mcp_client import MCPClient
+from frontend.custom_mcp_client import MCPClient
 from frontend.utils import sidebar
 
 # Page Configuration
@@ -147,7 +146,7 @@ async def upload_to_snowflake(df, segment_name):
         st.info("Connecting to Snowflake MCP server...")
         
         # Create and configure MCP client
-        from agents.custom_mcp_client import MCPClient
+        from frontend.custom_mcp_client import MCPClient
         snowflake_mcp_client = MCPClient("snowflake")
         
         # Check if Snowflake server is available first

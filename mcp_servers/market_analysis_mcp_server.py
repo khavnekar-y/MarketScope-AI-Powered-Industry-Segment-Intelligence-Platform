@@ -36,7 +36,7 @@ except ImportError:
     has_new_openai = False
     
 # Import configuration
-from config.config import Config
+from frontend.config import Config
 
 # Get the OpenAI API key directly from environment variable
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")

@@ -26,7 +26,7 @@ logger = logging.getLogger("snowflake_mcp_server")
 
 # Import configuration
 try:
-    from config.config import Config
+    from frontend.config import Config
 except ImportError:
     # Fallback configuration if import fails
     logger.warning("Could not import Config, using default values")
